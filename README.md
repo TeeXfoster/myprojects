@@ -1,113 +1,110 @@
-# Vision Sketches Website (Static HTML)
 
-This folder contains a simple static website built with plain *HTML*.
+# Vision Sketches (Static Multi-page Website)
 
----
+## Project overview
+**Vision Sketches** is a static, multi-page website built with **HTML/CSS**.
 
-## 1) Folder Structure (what’s inside this folder)
+It provides navigation across core pages:
+- Home (`index.html`)
+- About (`about-us.html`)
+- Product (`product.html`)
+- Features (`features.html`)
+- Contact (`contact.html`)
 
-- project/README.md  
-  This documentation file.
-
-- pages/  
-  All website pages (each page is a separate .html file):
-  - pages/index.html (Landing page)
-  - pages/home.html
-  - pages/about-us.html
-  - pages/integrations.html
-  - pages/pricing.html
-  - pages/features.html
-
-- assets/  
-  Static assets used by the pages:
-  - assets/IMAGE.jpeg (used on the Home page)
-
-- css/  
-  A CSS directory exists in the project root. (In the current HTML pages you can see, no CSS file is explicitly linked.)
+The site uses a shared global stylesheet and assets stored in the `asset/` folder.
 
 ---
 
-## 2) How Navigation Works
-
-Every page uses the same navigation bar:
-
-- Home
-- About Us
-- Integrations
-- Pricing
-- Features
-
-The links switch between files inside pages/, for example:
-
-- From pages/index.html to pages/home.html:
-  - home link → home.html
-
-Because these are separate HTML files, the site works by directly opening the corresponding file (no build step needed).
-
----
-
-## 3) Step-by-Step: How to View the Website
-
-### Option A (Simplest)
-1. Go to: project/pages/
-2. Open index.html in a web browser.
-3. Use the navigation links in the header to move between pages.
-
-### Option B (Check the Home image path)
-1. Open project/pages/home.html in a browser.
-2. Confirm the image loads.
-3. The Home page references the image using a relative path:
-   - ../assets/IMAGE.jpeg
-
-If you open home.html from a different folder location (outside project/pages/), the image path may not resolve correctly.
-
----
-
-## 4) Pages (what each file is for)
-
-### pages/index.html
-- Landing page.
-- Shows a short introduction.
-- Includes a list of page links (Home, About Us, Integrations, Pricing, Features).
-
-### pages/home.html
-- Home section.
-- Includes a heading and a paragraph.
-- Displays the image:
-  - ../assets/IMAGE.jpeg
-
-### pages/about-us.html
-- About Us / mission-style content.
-- Explains the purpose of Vision Sketches.
-
-### pages/integrations.html
-- Lists integrations/tools.
-- Current content includes: figma, adobe xd, sketch, canva, procreate wireframes.
-
-### pages/pricing.html
-- Pricing section.
-- Contains a simple pricing table layout using HTML divs.
-
-### pages/features.html
-- Features list.
-- Uses an unordered list (<ul>) of feature items (drag-and-drop canvas, layers, export, vector tools, guides, undo/redo, etc.).
+## File structure
+```text
+my project/
+├─ index.html
+├─ about-us.html
+├─ features.html
+├─ contact.html
+├─ product.html
+├─ README.md
+├─ TODO.md
+├─ css/
+│  └─ styles.css
+└─ asset/
+   ├─ 101.mp4
+   ├─ 
+   ├─ art1.jpeg
+   ├─ art2.jpeg
+   ├─ art3.jpeg
+   ├─ art4.jpeg
+   ├─ art5.jpeg
+   ├─ art6.jpeg
+   ├─ art7.jpeg
+   ├─ art8.jpeg
+   ├─ art9.jpeg
+   ├─ art10.jpeg
+   ├─ art11.jpeg
+   ├─ art12.jpeg
+   ├─ art13.jpeg
+   ├─ screenshot laptop-1024px.png
+   ├─ screenshot tablet 768px.png
+   └─ screenshotmobiles-320px.png
+```
 
 ---
 
-## 5) Notes (relative links and consistency)
+## Pages included
 
-- The pages consistently include:
-  - header (title: VISION SKETCHES)
-  - nav (page-to-page links)
-  - footer (copyright line)
-- The only asset currently referenced directly is the image on the Home page:
-  - project/assets/IMAGE.jpeg
+### `index.html` (Home)
+- Top navigation (Home, About Us, Product, Features, Contact)
+- Hero section with a video (`asset/101.mp4`)
+- CTA buttons to Product and Features
+- Footer with social links and “Back to Top”
+
+### `about-us.html` (About)
+- Navigation + About content
+- Vision / Values / History sections
+- Team section with images from `asset/`
+- Footer with social links and “Back to Top”
+
+### `features.html` (Features)
+- Navigation + a features list
+- Footer with social links and “Back to Top”
+
+### `product.html` (Product)
+- Navigation + product/pricing sections
+- “Product images” grid showing thumbnails from `asset/art1.jpeg` … `asset/art13.jpeg`
+- Footer with social links and “Back to Top”
+
+### `contact.html` (Contact)
+- Navigation + contact information
+- Embedded Google Map iframe
+- Contact form (with a modal placeholder for success)
+- Footer with social links and “Back to Top”
 
 ---
 
-## Quick Checklist
+## Assets
+- Images/videos are stored in `asset/`.
+- Background imagery is implemented via `css/styles.css` using the `asset/` files.
 
-- [ ] Open project/pages/index.html
-- [ ] Click through nav links to confirm all pages load
-- [ ] Open project/pages/home.html to confirm ../assets/IMAGE.jpeg loads correctly# project
+---
+
+## Styling
+
+### Global stylesheet: `css/styles.css`
+Defines:
+- Base/reset styles
+- Shared layout for `header`, `nav`, `main`, `footer`
+- Button styles (`.btn`, `.btn.primary`)
+- Product page helpers
+- Smooth scrolling (`html { scroll-behavior: smooth; }`)
+- Background image helpers (e.g. `.page-bg`, `.about-bg`, `#features`)
+
+---
+
+## Screenshot files (Mobilisation)
+The project includes responsive screenshots to demonstrate the UI across device sizes. Click a link to open the image:
+- [Laptop (1024px)](asset/screenshot%20laptop-1024px.png)
+- [Tablet (768px)](asset/screenshot%20tablet%20768px.png)
+- [Mobile (320px)](asset/screenshotmobiles-320px.png)
+
+
 
