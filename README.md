@@ -1,8 +1,9 @@
-
 # Vision Sketches (Static Multi-page Website)
+
 
 ## Project overview
 **Vision Sketches** is a static, multi-page website built with **HTML/CSS**.
+
 
 It provides navigation across core pages:
 - Home (`index.html`)
@@ -11,9 +12,12 @@ It provides navigation across core pages:
 - Features (`features.html`)
 - Contact (`contact.html`)
 
+
 The site uses a shared global stylesheet and assets stored in the `asset/` folder.
 
+
 ---
+
 
 ## File structure
 ```text
@@ -48,9 +52,12 @@ my project/
    └─ screenshotmobiles-320px.png
 ```
 
+
 ---
 
+
 ## Pages included
+
 
 ### `index.html` (Home)
 - Top navigation (Home, About Us, Product, Features, Contact)
@@ -58,20 +65,24 @@ my project/
 - CTA buttons to Product and Features
 - Footer with social links and “Back to Top”
 
+
 ### `about-us.html` (About)
 - Navigation + About content
 - Vision / Values / History sections
 - Team section with images from `asset/`
 - Footer with social links and “Back to Top”
 
+
 ### `features.html` (Features)
 - Navigation + a features list
 - Footer with social links and “Back to Top”
+
 
 ### `product.html` (Product)
 - Navigation + product/pricing sections
 - “Product images” grid showing thumbnails from `asset/art1.jpeg` … `asset/art13.jpeg`
 - Footer with social links and “Back to Top”
+
 
 ### `contact.html` (Contact)
 - Navigation + contact information
@@ -79,15 +90,33 @@ my project/
 - Contact form (with a modal placeholder for success)
 - Footer with social links and “Back to Top”
 
+
 ---
+
 
 ## Assets
 - Images/videos are stored in `asset/`.
 - Background imagery is implemented via `css/styles.css` using the `asset/` files.
 
+
+### Assets used for JavaScript/Performance
+- [javascriptperfomance.png](asset/javascriptperfomance.png)
+- [testing javascript.png](asset/testing javascript.png)
+
+
+
+
+
+
+
+
+
+
 ---
 
+
 ## Styling
+
 
 ### Global stylesheet: `css/styles.css`
 Defines:
@@ -98,13 +127,74 @@ Defines:
 - Smooth scrolling (`html { scroll-behavior: smooth; }`)
 - Background image helpers (e.g. `.page-bg`, `.about-bg`, `#features`)
 
+
 ---
 
+
 ## Screenshot files (Mobilisation)
-The project includes responsive screenshots to demonstrate the UI across device sizes. Click a link to open the image:
+The project includes responsive screenshots to demonstrate the UI across device sizes. Click 
+a link to open the image:
 - [Laptop (1024px)](asset/screenshot%20laptop-1024px.png)
 - [Tablet (768px)](asset/screenshot%20tablet%20768px.png)
 - [Mobile (320px)](asset/screenshotmobiles-320px.png)
+
+
+---
+
+
+## JavaScript
+The project includes a shared JavaScript file used across pages:
+- `JavaScript/app.js`
+
+
+This script powers common interactive behaviors (for example, UI interactions and 
+form-related feedback).
+
+
+### JavaScript enhancements (planned/implemented)
+- Interactive UI elements like modals/tabs/accordions (where applicable).
+- Location-based map interactions (where applicable).
+- Animations and transitions using CSS + JavaScript.
+- Advanced DOM manipulation for dynamic page behavior.
+- Gallery behavior (lightbox-style image viewing) where applicable.
+- Dynamic content loading (for example, product/listing sections).
+- Search functionality to filter/sort content (where applicable).
+
+
+---
+
+
+### SEO notes related to JavaScript
+- Dynamic UI should not break accessibility (proper labels/structure).
+- Keep URLs and internal linking consistent so search engines can crawl content.
+
+
+---
+
+
+## Sitemap (SEO)
+An XML sitemap was added at:
+- `sitemap.xml/sitemap.xml`
+
+
+It includes these pages:
+- `index.html`
+- `about-us.html`
+- `product.html`
+- `features.html`
+- `contact.html`
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
