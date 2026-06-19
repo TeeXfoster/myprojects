@@ -1,0 +1,3 @@
+This project previously had root-level pages as redirects to /index/.
+The task 'show the original content before any linking the sitemap' requires replacing those redirects with the real HTML content.
+
